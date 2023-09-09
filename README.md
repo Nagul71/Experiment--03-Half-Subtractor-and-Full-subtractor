@@ -33,22 +33,58 @@ Write the detailed procedure here
 
 
 ## Program:
-/*
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
 Developed by: NAGUL K 
 RegisterNumber:  212222230089
-*/
+```
+```
+module exp4(a,b,diff,borr);
+input a,b;
+output diff,borr;
+assign diff = a^b;
+assign borrow =((~a)&b);
+endmodule
+````
+```
+module exp4(A,B,bin,diff,borrow);
+input a,b,bin;
+output diff,borr;
+assign diff= a^b^bin;
+assign borrow = ((~a)&b)|(b&bin)|((~a)&bin);
+endmodule
+```
 
 ## Output:
 
 ## Truthtable
+### HALF SUBTRACTOR
+![image](https://github.com/Nagul71/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118661118/5a03b027-62a4-4d5c-9701-6fc26011a4f4)
+### FULL SUBTRACTOR
+![image](https://github.com/Nagul71/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118661118/7cda216c-b83f-4f64-bbc3-28daaa47429c)
+
 
 
 
 ##  RTL realization
+### HALF SUBTRACTOR
+![Screenshot 2023-09-09 090156](https://github.com/Nagul71/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118661118/d67e695f-7340-43ad-8ff8-d83bd57a0470)
+
+### FULL SUBTRACTOR
+
+![Screenshot 2023-09-09 094145](https://github.com/Nagul71/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118661118/336fd7c4-58f2-47cc-9337-6fa17545c3bf)
 
 
-## Timing diagram 
+
+
+## wave form
+### HALF SUBTRACTOR
+![Screenshot 2023-09-09 091606](https://github.com/Nagul71/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118661118/5a331fbc-3476-4b48-83dc-447ef6632c7f)
+
+### FULL SUBTRACTOR
+
+![Screenshot 2023-09-09 094540](https://github.com/Nagul71/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118661118/e7802d69-4a3a-4107-862c-1ea4ac4579c9)
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
