@@ -47,7 +47,7 @@ assign borrow =((~a)&b);
 endmodule
 ````
 ```
-module exp4(A,B,bin,diff,borrow);
+module exp4(a,b,bin,diff,borrow);
 input a,b,bin;
 output diff,borr;
 assign diff= a^b^bin;
